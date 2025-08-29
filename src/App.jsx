@@ -157,6 +157,114 @@ export default function App() {
                   className="bg-yellow-100 border border-yellow-400 px-3 py-2 rounded-lg font-mono text-lg sm:text-xl lg:text-2xl xl:text-3xl"
                 >
                   E = kq / r²
+                  E
+S
+5 1
+4pP0
+q
+r2 r^
+
+¿Qué significa cada símbolo?
+
+𝐸
+⃗
+E
+: vector campo eléctrico (N/C).
+
+𝑞
+q: valor de la carga puntual (C).
+
+𝑟
+=
+∣
+𝑟
+⃗
+∣
+r=∣
+r
+∣: distancia desde la carga hasta el punto donde calculas el campo (m).
+
+𝑟
+^
+=
+𝑟
+⃗
+∣
+𝑟
+⃗
+∣
+r
+^
+=
+∣
+r
+∣
+r
+	​
+
+: vector unitario que apunta desde la carga hacia el punto.
+
+𝜀
+0
+ε
+0
+	​
+
+: permitividad del vacío 
+≈
+8.854
+ 
+187
+ 
+817
+×
+10
+−
+12
+ F/m
+≈8.854187817×10
+−12
+ F/m.
+
+1
+4
+𝜋
+𝜀
+0
+=
+𝑘
+≈
+8.987
+ 
+551
+ 
+792
+×
+10
+9
+ 
+N
+\cdotp
+m
+2
+/
+C
+2
+4πε
+0
+	​
+
+1
+	​
+
+=k≈8.987551792×10
+9
+ N\cdotpm
+2
+/C
+2
+ (constante de Coulomb).
+
                 </motion.span>
               </div>
             </motion.div>
