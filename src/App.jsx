@@ -143,10 +143,12 @@ export default function App() {
                   <p className="mt-2">🔹 La intensidad disminuye con la distancia.</p>
                 </div>
               </div>
+
+              {/* Fórmula y significado */}
               <div className="text-center mt-4">
-                <motion.span
+                <motion.div
                   animate={{
-                    scale: [1, 1.1, 1],
+                    scale: [1, 1.06, 1],
                     boxShadow: [
                       "0 0 15px #facc15",
                       "0 0 35px #facc15",
@@ -154,118 +156,21 @@ export default function App() {
                     ],
                   }}
                   transition={{ repeat: Infinity, duration: 2 }}
-                  className="bg-yellow-100 border border-yellow-400 px-3 py-2 rounded-lg font-mono text-lg sm:text-xl lg:text-2xl xl:text-3xl"
+                  className="bg-yellow-100 border border-yellow-400 px-3 py-2 rounded-lg font-mono text-lg sm:text-xl lg:text-2xl xl:text-3xl inline-block"
                 >
-                  E = kq / r²
-                  E
-S
-5 1
-4pP0
-q
-r2 r^
+                  E = k·q / r² = (1 / 4πϵ₀) · q / r²
+                </motion.div>
 
-¿Qué significa cada símbolo?
-
-𝐸
-⃗
-E
-: vector campo eléctrico (N/C).
-
-𝑞
-q: valor de la carga puntual (C).
-
-𝑟
-=
-∣
-𝑟
-⃗
-∣
-r=∣
-r
-∣: distancia desde la carga hasta el punto donde calculas el campo (m).
-
-𝑟
-^
-=
-𝑟
-⃗
-∣
-𝑟
-⃗
-∣
-r
-^
-=
-∣
-r
-∣
-r
-	​
-
-: vector unitario que apunta desde la carga hacia el punto.
-
-𝜀
-0
-ε
-0
-	​
-
-: permitividad del vacío 
-≈
-8.854
- 
-187
- 
-817
-×
-10
-−
-12
- F/m
-≈8.854187817×10
-−12
- F/m.
-
-1
-4
-𝜋
-𝜀
-0
-=
-𝑘
-≈
-8.987
- 
-551
- 
-792
-×
-10
-9
- 
-N
-\cdotp
-m
-2
-/
-C
-2
-4πε
-0
-	​
-
-1
-	​
-
-=k≈8.987551792×10
-9
- N\cdotpm
-2
-/C
-2
- (constante de Coulomb).
-
-                </motion.span>
+                <div className="mt-3 text-left mx-auto max-w-2xl text-gray-800 text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed">
+                  <ul className="list-disc list-inside space-y-1">
+                    <li><b>E</b>: campo eléctrico (N/C).</li>
+                    <li><b>q</b>: carga puntual (C).</li>
+                    <li><b>r</b>: distancia desde la carga al punto (m).</li>
+                    <li><b>r̂</b>: vector unitario desde la carga hacia el punto.</li>
+                    <li><b>ϵ₀</b>: permitividad del vacío ≈ 8.85×10⁻¹² F/m.</li>
+                    <li><b>k</b> = 1/(4πϵ₀) ≈ 8.99×10⁹ N·m²/C².</li>
+                  </ul>
+                </div>
               </div>
             </motion.div>
 
@@ -363,6 +268,53 @@ C
               </p>
             </motion.div>
           ))}
+          {/* Tabla de unidades de medida */}
+<motion.div
+initial={{ opacity: 0, y: 40 }}
+animate={{ opacity: 1, y: 0 }}
+transition={{ duration: 1, delay: 1.2 }}
+className="bg-gradient-to-br from-white via-blue-50 to-blue-100 shadow-lg hover:shadow-blue-400/50 rounded-2xl p-4 sm:p-6 xl:p-8 flex-1 overflow-x-auto hover:scale-[1.04] transition-transform"
+>
+<h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-blue-900 mb-4 text-center">
+📊 UNIDADES DE MEDIDA DEL CAMPO ELÉCTRICO
+</h2>
+<table className="w-full border border-blue-300 text-sm sm:text-base lg:text-lg xl:text-xl text-gray-800">
+<thead className="bg-blue-200 text-blue-900">
+<tr>
+<th className="border border-blue-300 px-2 py-1">Magnitud</th>
+<th className="border border-blue-300 px-2 py-1">Símbolo</th>
+<th className="border border-blue-300 px-2 py-1">Unidad</th>
+<th className="border border-blue-300 px-2 py-1">Equivalencia</th>
+</tr>
+</thead>
+<tbody>
+<tr className="hover:bg-blue-100">
+<td className="border border-blue-300 px-2 py-1">Campo eléctrico</td>
+<td className="border border-blue-300 px-2 py-1">E</td>
+<td className="border border-blue-300 px-2 py-1">Newton/Coulomb</td>
+<td className="border border-blue-300 px-2 py-1">N/C</td>
+</tr>
+<tr className="hover:bg-blue-100">
+<td className="border border-blue-300 px-2 py-1">Carga eléctrica</td>
+<td className="border border-blue-300 px-2 py-1">q</td>
+<td className="border border-blue-300 px-2 py-1">Coulomb</td>
+<td className="border border-blue-300 px-2 py-1">C</td>
+</tr>
+<tr className="hover:bg-blue-100">
+<td className="border border-blue-300 px-2 py-1">Fuerza eléctrica</td>
+<td className="border border-blue-300 px-2 py-1">F</td>
+<td className="border border-blue-300 px-2 py-1">Newton</td>
+<td className="border border-blue-300 px-2 py-1">N</td>
+</tr>
+<tr className="hover:bg-blue-100">
+<td className="border border-blue-300 px-2 py-1">Distancia</td>
+<td className="border border-blue-300 px-2 py-1">r</td>
+<td className="border border-blue-300 px-2 py-1">Metro</td>
+<td className="border border-blue-300 px-2 py-1">m</td>
+</tr>
+</tbody>
+</table>
+</motion.div>
         </div>
       </div>
     </div>
